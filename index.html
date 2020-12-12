@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>SportzQuiz</title>
+</head>
+<body>
+    <section class="body_container">
+        <div class="game_container">
+            <div class="appLogo">
+                <h5 id="appName" class="hide logo animate__animated animate__fadeInUp">Sportz<span class="animate__animated animate__bounce">Quiz</span></h5>
+            </div>
+
+            <div id="player_info" class="hide animate__animated animate__fadeInUp player_info">
+                <h5>Enter Player Name</h5>
+                <div class="player_name">
+                    <input required type="text" id="playerName" placeholder="USER_ID">
+                    <button id="submitName" class="mainBtn">ENTER</button>
+                </div>
+            </div>
+
+            <div id="welcome_sign" class=" hide welcomeSign">
+                <p id="welcomeText" class="_welcomeText animate__animated animate__bounce "></p>
+                <button id="main_menu" class="mainBtn animate__animated animate__fadeInDown">Menu</button>
+            </div>
+
+            <div id="menu_screen" class="  animate__animated animate__flipInX _gameMenu_screen">
+                <div class="sideBar">
+                    <ul>
+                        <li><a id="game_start" href="#startGame">Start Game</a></li>
+                        <li><a id="game_mode" href="#gameModes">Game Modes</a></li>
+                        <li><a id="leader_board" href="#leaderBoard">Leaderboard</a></li>
+                        <li><a id="help_btn" href="#help">Help</a></li>
+                        <li><a id="exit_btn" href="#exit" >Exit</a></li>
+
+                    </ul>
+                </div>
+
+                <div id="selectedMenu" class="selected_menu">
+                    <h4 class="screen_p">Selected Menu Options</h4>
+
+                </div>
+                <div class="hide">
+                    <div id="startGame" >
+                        <div class="start_game_container">
+                            <div >
+                                <label for="sports_name">Select a Sport</label>
+                                <select name="sports" id="sports_name">
+                                    <option value="--Select--">--Select--</option>
+                                    <option value="Soccer">Soccer</option>
+                                    <option value="Basketball">Basketball</option>
+                                    <option value="Football">Football</option>
+                                    <option value="Baseball">Baseball</option>
+                                    <option value="Golf">Golf</option>
+                                    <option value="Volleyball">Volleyball</option>
+                                </select>
+                            </div>
+                            <div>
+                                 <label for="category">Select a Category</label>
+                                 <select name="sports" id="category">
+                                     <option value="--Select--">--Select--</option>
+                                     <option value="History">General History</option>
+                                     <option value="Team">Team</option>
+                                     <option value="Player History">Player History</option>
+                                     <option value="Rules">Sport Rules</option>
+                                     <option value="Player Accolades">Player Accolades</option>
+                                 </select>
+                            </div>  
+                            
+                            <div>
+                                <button type="submit" id="playGame" class="mainBtn" value="Play Game">Play Game</button>
+                            </div>
+                        </div>              
+                    </div>
+
+                    <div id="gameModes">
+                        <p class="screen_p">Select Game Mode</p>
+
+                        <div class="gameModes_screen">
+                            <span>
+                                <i class="fas fa-stopwatch"></i>  
+                                <p>Timer</p>
+                            </span>
+                            <span>
+                                <i title="Coming - Soon" class="fas fa-skull-crossbones"></i>
+                                <p>Elimination Mode</p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div id="leaderBoard">
+                        <p class="screen_p">HIGHSCORE</p>
+                        <table class="leaderboard_table">
+                            <tr>
+                                <th>USER_ID</th>
+                                <th>Date</th>
+                                <th>Score</th>
+                            </tr>
+                            <tr id="myLeaderboard">
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <div id="help" >
+                        <p class="screen_p">FAQ</p>
+                        <div class="help_screen">
+                            <div class="help_questions">
+                                <span> <b>Q:</b> When will the Elimination Mode be Available?</span>
+                                <p> <b>A:</b> The Elimination Mode will be available as soon as Possible</p>
+                            </div>
+                            <div class="help_questions">
+                                <span> <b>Q:</b> How do you get Check your Score</span>
+                                <p> <b>A:</b> You can view your activity in leaderboard</p>
+                            </div>
+                            <div class="help_questions">
+                                <span> <b>Q:</b> Can I play against friends?</span>
+                                <p> <b>A:</b> Unfortunatley that feature is yet to be included</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="exit">
+                        <p class="screen_p">Exit Game</p>
+
+                        <div class="exit_screen">
+                            <p>Are you Sure You want to Exit Game?</p>
+                            <div>
+                                <button type="submit" class="mainBtn">YES</button>
+                                <button type="submit" class="mainBtn">NO</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+           
+        </div>
+
+    </section>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
